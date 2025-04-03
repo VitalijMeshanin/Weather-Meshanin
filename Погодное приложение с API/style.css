@@ -1,0 +1,149 @@
+/* Подключаем шрифты из Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0f7fa;
+    /* Светлый голубой фон */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    /* Увеличенный радиус для более мягких углов */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Более заметная тень */
+    text-align: center;
+    /* Центрирование текста */
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    /* Заголовок с другим шрифтом */
+    color: #00796b;
+    /* Темно-голубой цвет для заголовка */
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    /* Увеличенный отступ */
+    margin-bottom: 15px;
+    /* Увеличенный отступ */
+    border: 2px solid #00796b;
+    /* Темно-голубая рамка */
+    border-radius: 5px;
+    font-size: 16px;
+    /* Увеличенный размер шрифта */
+}
+
+input[type="text"]:focus {
+    border-color: #004d40;
+    /* Более темный цвет рамки при фокусе */
+    outline: none;
+    /* Убираем стандартный контур */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    /* Увеличенный отступ */
+    background-color: #00796b;
+    /* Темно-голубой фон */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    /* Увеличенный размер шрифта */
+    transition: background-color 0.3s;
+    /* Плавный переход цвета */
+}
+
+button:hover {
+    background-color: #004d40;
+    /* Темно-зеленый цвет при наведении */
+}
+
+.hidden {
+    display: none;
+}
+
+#loading {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+
+/* Стили для спиннера */
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #00796b;
+    /* Цвет спиннера */
+    border-radius: 50%;
+    width: 40px;
+    /* Ширина спиннера */
+    height: 40px;
+    /* Высота спиннера */
+    animation: spin 1s linear infinite;
+    /* Анимация вращения */
+    margin: 20px auto;
+    /* Центрирование спиннера */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#error-message {
+    color: #d32f2f;
+    /* Красный цвет для сообщений об ошибках */
+    text-align: center;
+    font-weight: bold;
+    /* Жирный текст для сообщений об ошибках */
+}
+
+
+/* Стили для блока с данными о погоде */
+
+#weather-data {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #00796b;
+    /* Темно-голубая рамка */
+    border-radius: 5px;
+    background-color: #e0f2f1;
+    /* Светлый фон для блока с погодой */
+}
+
+#weather-data h2 {
+    font-family: 'Montserrat', sans-serif;
+    /* Заголовок с другим шрифтом */
+    color: #00796b;
+    /* Темно-голубой цвет для заголовка */
+}
+
+#weather-data p {
+    margin: 5px 0;
+    font-size: 16px;
+    /* Увеличенный размер шрифта */
+    color: #004d40;
+    /* Темно-зеленый цвет для текста */
+}
